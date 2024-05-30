@@ -1,11 +1,11 @@
 CREATE TABLE games(
-    id INT NOT NULL,
-    title VARCHAR(100) NOT NULL,
+    game_id INT Not NULL,
+    game_title VARCHAR(100) NOT NULL,
     developer VARCHAR(100) NOT NULL,
     publisher VARCHAR(100) NOT NULL,
     release_date DATE NOT NULL,
     platform VARCHAR(100) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (game_id)
 );
 
 /*
@@ -19,7 +19,7 @@ INSERT INTO games VALUES (4, 'Pokemon Black', 'Game Freak', 'NINTENDO', '2010-09
 INSERT INTO games VALUES (5, 'Pokemon Black2', 'Game Freak', 'NINTENDO', '2012-06-23', 'Nintendo DS Lite');
 INSERT INTO games VALUES (6, 'WarioWare: Touched', 'INTELLIGENT SYSTEMS', 'NINTENDO', '2004-12-02', 'Nintendo DS Lite');
 INSERT INTO games VALUES (7, 'Super Mario 64 DS', 'NINTENDO', 'NINTENDO', '2004-11-21', 'Nintendo DS Lite');
-INSERT INTO games VALUES (8, 'New Super Mario Bros-', 'NINTENDO', 'NINTENDO', '2006-05-15', 'Nintendo DS Lite');
+INSERT INTO games VALUES (8, 'New Super Mario Bros.', 'NINTENDO', 'NINTENDO', '2006-05-15', 'Nintendo DS Lite');
 INSERT INTO games VALUES (9, 'Brain Age: Train Your Brain in Minutes a Day', 'NINTENDO', 'NINTENDO', '2005-04-16', 'Nintendo DS Lite');
 INSERT INTO games VALUES (10, 'Animal Crossing: Wild World', 'NINTENDO', 'NINTENDO', '2005-11-23', 'Nintendo DS Lite');
 INSERT INTO games VALUES (11, 'Nintendogs', 'NINTENDO', 'NINTENDO', '2005-04-21', 'Nintendo DS Lite');
@@ -38,15 +38,15 @@ INSERT INTO games VALUES (23, 'The Legend of Zelda: Phantom Hourglass', 'NINTEND
 INSERT INTO games VALUES (24, 'Metroid Prime Hunters', 'NINTENDO Software Technology', 'NINTENDO', '2006-03-20', 'Nintendo DS Lite');
 INSERT INTO games VALUES (25, 'Mario Party DS', 'Hudson Soft', 'NINTENDO', '2007-11-08', 'Nintendo DS Lite');
 INSERT INTO games VALUES (26, 'Yoshi\'s Island DS', 'Artoon', 'NINTENDO', '2006-11-13', 'Nintendo DS Lite');
-INSERT INTO games VALUES (27, 'New Super Mario Bros- Wii', 'NINTENDO', 'NINTENDO', '2009-11-12', 'Nintendo Wii');
+INSERT INTO games VALUES (27, 'New Super Mario Bros. Wii', 'NINTENDO', 'NINTENDO', '2009-11-12', 'Nintendo Wii');
 INSERT INTO games VALUES (28, 'SUPER MARIO GALAXY', 'NINTENDO', 'NINTENDO', '2007-11-01', 'Nintendo Wii');
 INSERT INTO games VALUES (29, 'SUPER MARIO GALAXY2', 'NINTENDO', 'NINTENDO', '2010-05-23', 'Nintendo Wii');
-INSERT INTO games VALUES (30, 'Super Smash Bros- Brawl', 'Sora', 'NINTENDO', '2008-01-31', 'Nintendo Wii');
+INSERT INTO games VALUES (30, 'Super Smash Bros. Brawl', 'Sora', 'NINTENDO', '2008-01-31', 'Nintendo Wii');
 INSERT INTO games VALUES (31, 'Mario & Sonic at the Olympic Games', 'SEGA', 'NINTENDO', '2007-11-20', 'Nintendo Wii');
 INSERT INTO games VALUES (32, 'Wii Play', 'NINTENDO', 'NINTENDO', '2006-12-02', 'Nintendo Wii');
 INSERT INTO games VALUES (33, 'Pokemon X', 'Game Freak', 'NINTENDO', '2013-10-12', 'Nintendo 3DS');
-INSERT INTO games VALUES (34, 'Super Smash Bros- for Nintendo 3DS', 'Sora', 'NINTENDO', '2014-09-13', 'Nintendo 3DS');
-INSERT INTO games VALUES (35, 'New Super Mario Bros- 2', 'NINTENDO', 'NINTENDO', '2012-07-28', 'Nintendo 3DS');
+INSERT INTO games VALUES (34, 'Super Smash Bros. for Nintendo 3DS', 'Sora', 'NINTENDO', '2014-09-13', 'Nintendo 3DS');
+INSERT INTO games VALUES (35, 'New Super Mario Bros. 2', 'NINTENDO', 'NINTENDO', '2012-07-28', 'Nintendo 3DS');
 INSERT INTO games VALUES (36, 'The Legend of Zelda: Ocarina of Time 3D', 'GREZZO', 'NINTENDO', '2011-06-16', 'Nintendo 3DS');
 INSERT INTO games VALUES (37, 'Super Mario 3D Land', 'NINTENDO', 'NINTENDO', '2011-11-03', 'Nintendo 3DS');
 INSERT INTO games VALUES (38, 'Animal Crossing: New Leaf', 'NINTENDO', 'NINTENDO', '2012-11-08', 'Nintendo 3DS');
@@ -85,7 +85,7 @@ INSERT INTO games VALUES (70, 'BanG Dream! Girls Band Party!', 'Craft Egg', 'Bus
 INSERT INTO games VALUES (71, 'Temple Run', 'IMANGI Studio', 'IMANGI Studio', '2011-08-04', 'Mobile');
 INSERT INTO games VALUES (72, 'Modoo Marble for Kakao', 'netmarble', 'netmarble', '2013-06-11', 'Mobile');
 INSERT INTO games VALUES (73, 'Bouncy Ball', 'Raon Games', 'Raon Games', '2012-07-25', 'Mobile');
-INSERT INTO games VALUES (74, 'Bouncy Ball 2-5D', 'Raon Games', 'Raon Games', '2013-02-13', 'Mobile');
+INSERT INTO games VALUES (74, 'Bouncy Ball 2.5D', 'Raon Games', 'Raon Games', '2013-02-13', 'Mobile');
 INSERT INTO games VALUES (75, 'PUBG: BATTLEGROUNDS MOBILE', 'KRAFTON', 'KRAFTON', '2018-05-16', 'Mobile');
 INSERT INTO games VALUES (76, 'Honkai Impact 3rd', 'HoYoverse', 'miHoYo', '2016-10-14', 'Mobile');
 INSERT INTO games VALUES (77, 'Iron Man 3', 'Gameloft', 'Gameloft', '2013-04-29', 'Mobile');
@@ -121,3 +121,175 @@ INSERT INTO games VALUES (106, 'Minecraft', 'Mojang AB', 'Mojang AB', '2011-11-1
 INSERT INTO games VALUES (107, 'Goose Goose Duck', 'Gaggle Studios', 'Gaggle Studios', '2021-10-03', 'Microsoft Windows');
 INSERT INTO games VALUES (108, 'Sudden Attack', 'NEXON GT', 'NEXON', '2005-08-23', 'Microsoft Windows');
 INSERT INTO games VALUES (109, 'Black Squad', 'NS Studio', 'NEOWIZ', '2014-11-12', 'Microsoft Windows');
+
+
+/*
+Create genres table
+*/
+
+CREATE TABLE genres(
+    genre_id INT NOT NULL,
+    genre_name VARCHAR(100) NOT NULL,
+    PRIMARY KEY(genre_id)
+);
+
+INSERT INTO genres VALUES (1, 'RPG');
+INSERT INTO genres VALUES (2, '2D Platformer');
+INSERT INTO genres VALUES (3, '3D Platformer');
+INSERT INTO genres VALUES (4, 'ARPG');
+INSERT INTO genres VALUES (5, 'FPS');
+INSERT INTO genres VALUES (6, 'MMOFPS');
+INSERT INTO genres VALUES (7, 'MMORPG');
+INSERT INTO genres VALUES (8, 'Puzzle');
+INSERT INTO genres VALUES (9, 'Fighting');
+INSERT INTO genres VALUES (10, 'Endless Runner');
+INSERT INTO genres VALUES (11, 'Racing');
+INSERT INTO genres VALUES (12, 'Logic Puzzle');
+INSERT INTO genres VALUES (13, 'Rhythm');
+INSERT INTO genres VALUES (14, 'Mystery Crime');
+INSERT INTO genres VALUES (15, 'Battle Royale');
+INSERT INTO genres VALUES (16,'Court Battle');
+INSERT INTO genres VALUES (17, 'Boardgame');
+INSERT INTO genres VALUES (18, 'Flight Simulation');
+INSERT INTO genres VALUES (19, 'Social Deduction');
+INSERT INTO genres VALUES (20, 'Sandbox');
+INSERT INTO genres VALUES (21, 'Social RPG');
+INSERT INTO genres VALUES (22, 'Sports');
+INSERT INTO genres VALUES (23, 'Simulation');
+INSERT INTO genres VALUES (24, 'Real time Strategy');
+INSERT INTO genres VALUES (25, 'Arcade');
+INSERT INTO genres VALUES (26, 'Action TPS');
+INSERT INTO genres VALUES (27, 'Action Adventure');
+INSERT INTO genres VALUES (28, 'AR');
+INSERT INTO genres VALUES (29, 'Casual');
+INSERT INTO genres VALUES (30, 'Communication');
+INSERT INTO genres VALUES (31, 'Tycoon');
+INSERT INTO genres VALUES (32, 'Party');
+INSERT INTO genres VALUES (33, 'Puzzle Platformer');
+INSERT INTO genres VALUES (34, 'Hero Shooting');
+INSERT INTO genres VALUES (35, 'Minigame compilation');
+
+CREATE TABLE game_genres(
+    game_id INT,
+    genre_id INT,
+    PRIMARY KEY (game_id, genre_id),
+    FOREIGN KEY (game_id) REFERENCES games(game_id),
+    FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
+);
+
+INSERT INTO game_genres VALUES(1,1);
+INSERT INTO game_genres VALUES(2,1);
+INSERT INTO game_genres VALUES(3,1);
+INSERT INTO game_genres VALUES(4,1);
+INSERT INTO game_genres VALUES(5,1);
+INSERT INTO game_genres VALUES(6,35);
+INSERT INTO game_genres VALUES(7,3);
+INSERT INTO game_genres VALUES(8,2);
+INSERT INTO game_genres VALUES(9,8);
+INSERT INTO game_genres VALUES(10,23);
+INSERT INTO game_genres VALUES(11,30);
+INSERT INTO game_genres VALUES(12,13);
+INSERT INTO game_genres VALUES(13,13);
+INSERT INTO game_genres VALUES(14,8);
+INSERT INTO game_genres VALUES(15,11);
+INSERT INTO game_genres VALUES(16,1);
+INSERT INTO game_genres VALUES(17,2);
+INSERT INTO game_genres VALUES(18,16);
+INSERT INTO game_genres VALUES(19,16);
+INSERT INTO game_genres VALUES(20,16);
+INSERT INTO game_genres VALUES(21,16);
+INSERT INTO game_genres VALUES(22,17);
+INSERT INTO game_genres VALUES(23,27);
+INSERT INTO game_genres VALUES(24,5);
+INSERT INTO game_genres VALUES(25,32);
+INSERT INTO game_genres VALUES(26,2);
+INSERT INTO game_genres VALUES(27,2);
+INSERT INTO game_genres VALUES(28,3);
+INSERT INTO game_genres VALUES(29,3);
+INSERT INTO game_genres VALUES(30,9);
+INSERT INTO game_genres VALUES(31,22);
+INSERT INTO game_genres VALUES(32,32);
+INSERT INTO game_genres VALUES(33,1);
+INSERT INTO game_genres VALUES(34,9);
+INSERT INTO game_genres VALUES(35,2);
+INSERT INTO game_genres VALUES(36,27);
+INSERT INTO game_genres VALUES(37,3);
+INSERT INTO game_genres VALUES(38,23);
+INSERT INTO game_genres VALUES(39,1);
+INSERT INTO game_genres VALUES(40,3);
+INSERT INTO game_genres VALUES(41,30);
+INSERT INTO game_genres VALUES(42,3);
+INSERT INTO game_genres VALUES(43,3);
+INSERT INTO game_genres VALUES(44,27);
+INSERT INTO game_genres VALUES(45,8);
+INSERT INTO game_genres VALUES(46,28);
+INSERT INTO game_genres VALUES(47,21);
+INSERT INTO game_genres VALUES(48,10);
+INSERT INTO game_genres VALUES(49,8);
+INSERT INTO game_genres VALUES(50,10);
+INSERT INTO game_genres VALUES(51,23);
+INSERT INTO game_genres VALUES(52,10);
+INSERT INTO game_genres VALUES(53,14);
+INSERT INTO game_genres VALUES(54,17);
+INSERT INTO game_genres VALUES(55,8);
+INSERT INTO game_genres VALUES(56,31);
+INSERT INTO game_genres VALUES(57,31);
+INSERT INTO game_genres VALUES(58,20);
+INSERT INTO game_genres VALUES(59,8);
+INSERT INTO game_genres VALUES(60,12);
+INSERT INTO game_genres VALUES(61,12);
+INSERT INTO game_genres VALUES(62,8);
+INSERT INTO game_genres VALUES(63,19);
+INSERT INTO game_genres VALUES(64,8);
+INSERT INTO game_genres VALUES(65,8);
+INSERT INTO game_genres VALUES(66,8);
+INSERT INTO game_genres VALUES(67,8);
+INSERT INTO game_genres VALUES(68,13);
+INSERT INTO game_genres VALUES(69,13);
+INSERT INTO game_genres VALUES(70,13);
+INSERT INTO game_genres VALUES(71,10);
+INSERT INTO game_genres VALUES(72,17);
+INSERT INTO game_genres VALUES(73,8);
+INSERT INTO game_genres VALUES(74,8);
+INSERT INTO game_genres VALUES(75,15);
+INSERT INTO game_genres VALUES(76,4);
+INSERT INTO game_genres VALUES(77,10);
+INSERT INTO game_genres VALUES(78,7);
+INSERT INTO game_genres VALUES(79,2);
+INSERT INTO game_genres VALUES(80,5);
+INSERT INTO game_genres VALUES(81,27);
+INSERT INTO game_genres VALUES(82,29);
+INSERT INTO game_genres VALUES(83,9);
+INSERT INTO game_genres VALUES(84,6);
+INSERT INTO game_genres VALUES(85,33);
+INSERT INTO game_genres VALUES(86,33);
+INSERT INTO game_genres VALUES(87,15);
+INSERT INTO game_genres VALUES(88,8);
+INSERT INTO game_genres VALUES(89,8);
+INSERT INTO game_genres VALUES(90,20);
+INSERT INTO game_genres VALUES(91,23);
+INSERT INTO game_genres VALUES(92,34);
+INSERT INTO game_genres VALUES(93,9);
+INSERT INTO game_genres VALUES(94,29);
+INSERT INTO game_genres VALUES(95,34);
+INSERT INTO game_genres VALUES(96,27);
+INSERT INTO game_genres VALUES(97,18);
+INSERT INTO game_genres VALUES(98,5);
+INSERT INTO game_genres VALUES(99,5);
+INSERT INTO game_genres VALUES(100,15);
+INSERT INTO game_genres VALUES(101,34);
+INSERT INTO game_genres VALUES(102,34);
+INSERT INTO game_genres VALUES(103,24);
+INSERT INTO game_genres VALUES(104,24);
+INSERT INTO game_genres VALUES(105,26);
+INSERT INTO game_genres VALUES(106,20);
+INSERT INTO game_genres VALUES(107,19);
+INSERT INTO game_genres VALUES(108,5);
+INSERT INTO game_genres VALUES(109,5);
+
+/* command to find game title and genre name
+SELECT g.game_title, gr.genre_name 
+FROM game_genres gg 
+JOIN games g ON gg.game_id = g.game_id
+JOIN genres gr ON gg.genre_id = gr.genre_id;
+*/
