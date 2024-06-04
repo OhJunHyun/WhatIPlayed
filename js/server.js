@@ -30,7 +30,7 @@ app.listen(port, () => {
 */
 const mysql = require('mysql');
 const connection = mysql.createConnection({
-    host: 'localhost',
+    host: 'localhost:8000',
     user: 'root',
     password: 'oksan1717',
     database: 'mygames'

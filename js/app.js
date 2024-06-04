@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', () => {
     fetch('/api/games')
     .then(response => response.json())
@@ -31,3 +32,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });  
     });
 });
+*/
