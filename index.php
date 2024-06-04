@@ -1,7 +1,7 @@
 <?php
 // Database connection information
-require_once 'connect.php';
-include 'header.php';
+require_once 'database/connect.php';
+include 'templates/header.php';
 
 // SQL Query
 $sql = "SELECT * FROM games";
